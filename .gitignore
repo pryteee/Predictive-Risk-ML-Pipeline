@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+
+# VS Code
+.vscode/
+
+# Data files (users will generate these)
+data/raw/*.csv
+data/processed/*.csv
+
+# Model files (users will generate these)
+models/*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.lnk
