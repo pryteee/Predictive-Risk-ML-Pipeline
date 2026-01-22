@@ -10,8 +10,8 @@ venv/
 .vscode/
 
 # Generated data files (users should generate these)
-data/raw/students.csv
-data/processed/cleaned_students.csv
+data/raw/
+data/processed/
 
 
 models/*.pkl
