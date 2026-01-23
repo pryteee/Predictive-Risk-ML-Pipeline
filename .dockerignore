@@ -1,16 +1,16 @@
+# Don't copy these into Docker
 venv/
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-.Python
-*.so
 .git/
 .gitignore
 *.md
-data/
-notebooks/
-tests/
-.env
-*.log
+.vscode/
 .DS_Store
+Thumbs.db
+*.log
+
+# Don't copy data/models - Docker will generate them
+data/
+models/
