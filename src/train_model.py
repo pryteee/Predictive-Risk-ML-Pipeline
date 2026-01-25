@@ -59,7 +59,7 @@ def evaluate_model(model, X_test, y_test):
     return metrics
 
 if __name__ == "__main__":
-    # Load data
+    
     df = load_processed_data('data/processed/cleaned_students.csv')
     
     # Prepare features

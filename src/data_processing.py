@@ -17,7 +17,7 @@ def clean_data(df):
     # Remove duplicates
     df_clean = df_clean.drop_duplicates()
     
-    # Encode categorical variables
+    
     le_gender = LabelEncoder()
     le_income = LabelEncoder()
     le_education = LabelEncoder()
@@ -26,7 +26,7 @@ def clean_data(df):
     df_clean['income_encoded'] = le_income.fit_transform(df_clean['family_income'])
     df_clean['education_encoded'] = le_education.fit_transform(df_clean['parent_education'])
     
-    # Save encoders for later use
+    
     joblib.dump(le_gender, 'models/gender_encoder.pkl')
     joblib.dump(le_income, 'models/income_encoder.pkl')
     joblib.dump(le_education, 'models/education_encoder.pkl')
@@ -39,7 +39,7 @@ def save_processed_data(df, filepath):
     print(f"Processed data saved to {filepath}")
 
 if __name__ == "__main__":
-    # Load data
+
     df = load_data('data/raw/students.csv')
     print(f"Loaded {len(df)} records")
     

@@ -12,12 +12,12 @@ def load_model():
 
 def predict_dropout(student_data, model, gender_enc, income_enc, education_enc):
     """Predict dropout probability for a student."""
-    # Encode categorical features
+    
     student_data['gender_encoded'] = gender_enc.transform([student_data['gender']])[0]
     student_data['income_encoded'] = income_enc.transform([student_data['family_income']])[0]
     student_data['education_encoded'] = education_enc.transform([student_data['parent_education']])[0]
     
-    # Prepare features
+    # features
     features = [[
         student_data['age'],
         student_data['gender_encoded'],

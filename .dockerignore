@@ -1,4 +1,4 @@
-# Don't copy these into Docker
+
 venv/
 __pycache__/
 *.pyc
@@ -11,6 +11,6 @@ __pycache__/
 Thumbs.db
 *.log
 
-# Don't copy data/models - Docker will generate them
+
 data/
 models/

@@ -2,12 +2,12 @@ from fastapi.testclient import TestClient
 import sys
 import os
 
-# Add parent directory to path to import api
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from api.main import app
 
-# Create test client
+
 client = TestClient(app)
 
 
@@ -59,7 +59,7 @@ def test_predict_invalid_gender():
     """Test prediction with invalid gender"""
     student_data = {
         "age": 18,
-        "gender": "X",  # Invalid gender
+        "gender": "X",
         "attendance_rate": 0.85,
         "cgpa": 7.5,
         "family_income": "Medium",
@@ -71,7 +71,7 @@ def test_predict_invalid_gender():
     }
     
     response = client.post("/predict", json=student_data)
-    assert response.status_code == 422  # Validation error
+    assert response.status_code == 422  
 
 
 def test_predict_invalid_gpa():
@@ -80,7 +80,7 @@ def test_predict_invalid_gpa():
         "age": 18,
         "gender": "F",
         "attendance_rate": 0.85,
-        "cgpa": 7.5, # Invalid GPA (> 4.0)
+        "cgpa": 7.5, 
         "family_income": "Medium",
         "study_hours_per_week": 15,
         "failed_courses": 1,
@@ -90,7 +90,7 @@ def test_predict_invalid_gpa():
     }
     
     response = client.post("/predict", json=student_data)
-    assert response.status_code == 422  # Validation error
+    assert response.status_code == 422
 
 
 def test_predict_missing_field():
@@ -108,4 +108,4 @@ def test_predict_missing_field():
     }
     
     response = client.post("/predict", json=student_data)
-    assert response.status_code == 422  # Validation error
+    assert response.status_code == 422
