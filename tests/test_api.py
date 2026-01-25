@@ -35,7 +35,7 @@ def test_predict_valid_input():
         "age": 18,
         "gender": "F",
         "attendance_rate": 0.85,
-        "gpa": 3.2,
+        "cgpa": 7.5,
         "family_income": "Medium",
         "study_hours_per_week": 15,
         "failed_courses": 1,
@@ -61,7 +61,7 @@ def test_predict_invalid_gender():
         "age": 18,
         "gender": "X",  # Invalid gender
         "attendance_rate": 0.85,
-        "gpa": 3.2,
+        "cgpa": 7.5,
         "family_income": "Medium",
         "study_hours_per_week": 15,
         "failed_courses": 1,
@@ -80,7 +80,7 @@ def test_predict_invalid_gpa():
         "age": 18,
         "gender": "F",
         "attendance_rate": 0.85,
-        "gpa": 5.0,  # Invalid GPA (> 4.0)
+        "cgpa": 7.5, # Invalid GPA (> 4.0)
         "family_income": "Medium",
         "study_hours_per_week": 15,
         "failed_courses": 1,
@@ -98,8 +98,7 @@ def test_predict_missing_field():
     student_data = {
         "age": 18,
         "gender": "F",
-        # Missing attendance_rate
-        "gpa": 3.2,
+        "cgpa": 7.5,
         "family_income": "Medium",
         "study_hours_per_week": 15,
         "failed_courses": 1,

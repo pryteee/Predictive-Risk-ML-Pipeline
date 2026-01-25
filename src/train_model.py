@@ -12,7 +12,7 @@ def load_processed_data(filepath):
 def prepare_features(df):
     """Prepare features and target."""
     feature_columns = [
-        'age', 'gender_encoded', 'attendance_rate', 'gpa',
+        'age', 'gender_encoded', 'attendance_rate', 'cgpa', 
         'income_encoded', 'study_hours_per_week', 'failed_courses',
         'extracurricular_activities', 'education_encoded', 'distance_from_home'
     ]

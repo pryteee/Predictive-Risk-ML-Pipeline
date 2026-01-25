@@ -18,7 +18,7 @@ class StudentData(BaseModel):
     age: int = Field(..., ge=16, le=100, description="Student age")
     gender: str = Field(..., pattern="^(M|F)$", description="Gender: M or F")
     attendance_rate: float = Field(..., ge=0.0, le=1.0, description="Attendance rate (0-1)")
-    gpa: float = Field(..., ge=0.0, le=4.0, description="GPA (0-4)")
+    cgpa: float = Field(..., ge=0.0, le=10.0, description="CGPA (0-10)")
     family_income: str = Field(..., pattern="^(Low|Medium|High)$", description="Family income level")
     study_hours_per_week: int = Field(..., ge=0, le=168, description="Study hours per week")
     failed_courses: int = Field(..., ge=0, description="Number of failed courses")
@@ -32,7 +32,7 @@ class StudentData(BaseModel):
                 "age": 18,
                 "gender": "F",
                 "attendance_rate": 0.85,
-                "gpa": 3.2,
+                "cgpa": 7.5,
                 "family_income": "Medium",
                 "study_hours_per_week": 15,
                 "failed_courses": 1,

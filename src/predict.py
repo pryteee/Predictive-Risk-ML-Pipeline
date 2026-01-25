@@ -22,7 +22,7 @@ def predict_dropout(student_data, model, gender_enc, income_enc, education_enc):
         student_data['age'],
         student_data['gender_encoded'],
         student_data['attendance_rate'],
-        student_data['gpa'],
+        student_data['cgpa'],
         student_data['income_encoded'],
         student_data['study_hours_per_week'],
         student_data['failed_courses'],

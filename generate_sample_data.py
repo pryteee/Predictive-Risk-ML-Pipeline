@@ -10,7 +10,7 @@ data = {
     'age': np.random.randint(16, 25, n_students),
     'gender': np.random.choice(['M', 'F'], n_students),
     'attendance_rate': np.random.uniform(0.5, 1.0, n_students),
-    'gpa': np.random.uniform(1.5, 4.0, n_students),
+    'cgpa': np.random.uniform(4.0, 10.0, n_students),
     'family_income': np.random.choice(['Low', 'Medium', 'High'], n_students),
     'study_hours_per_week': np.random.randint(0, 40, n_students),
     'failed_courses': np.random.randint(0, 5, n_students),
