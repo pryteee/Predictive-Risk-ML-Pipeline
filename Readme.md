@@ -89,7 +89,7 @@ Model saved to models/dropout_model.pkl
 uvicorn api.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### with docker
+### With Docker
 
 ```
 docker-compose up --build
